@@ -1,0 +1,12 @@
+DataStaticBD\FileAccess.class
+Resources\ApplicationConfig.class
+test\testeosmain.class
+Controller\UserController.class
+DataStaticBD\Conection.class
+DataStaticBD\CodeDJA.class
+DataStaticBD\DataBd.class
+DataStaticBD\Methods.class
+Models\Usermodel.class
+apisclient\NewJerseyClient.class
+DAO\UserDAO.class
+allApis\Userresource.class
