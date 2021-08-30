@@ -18,8 +18,10 @@ import javax.swing.table.DefaultTableModel;
  * In this class, the necessary methods for connecting, obtaining and sending data to the database are carried out.
  */
 public class Conection {
-    String user = "pdckzidnkeycgc";
-    String password = "0ae4bc49a06ffe1aba28d9845a6ba9c3fcf72766cc4a88fd8f2c1411a92439ef";
+ //  String user = "pdckzidnkeycgc";
+  //  String password = "0ae4bc49a06ffe1aba28d9845a6ba9c3fcf72766cc4a88fd8f2c1411a92439ef";
+    String user = "appdist";
+    String password = "@Aplicaciones@Distribuidas@2021";
     java.sql.Connection conex;
     DefaultTableModel dataModel;
     ResultSet result;
@@ -36,7 +38,8 @@ public class Conection {
     public boolean openConecction() {
         try {
             Class.forName("org.postgresql.Driver");
-            conex = DriverManager.getConnection("jdbc:postgresql://ec2-35-171-250-21.compute-1.amazonaws.com:5432/dannirq814voba", user, password);
+           // conex = DriverManager.getConnection("jdbc:postgresql://ec2-35-171-250-21.compute-1.amazonaws.com:5432/dannirq814voba", user, password);
+           conex = DriverManager.getConnection("jdbc:postgresql://190.15.134.7:8080/SmartHomeHiHome", user, password);
         } catch (Exception exc) {
             System.out.println("No connection");
             return false;

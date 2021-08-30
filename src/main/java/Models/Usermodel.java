@@ -1,11 +1,11 @@
-
 package Models;
+
 /**
  *
  * @author Faroukmn_97
  */
 public class Usermodel {
-    
+
     private String user_id = "-2";
     private String name = "-2";
     private String last_name = "-2";
@@ -14,20 +14,15 @@ public class Usermodel {
     private String address = "-2";
     private String type = "-2";
     private String imguser = "-2";
+    private String registrationdate = "-2";
+    private String dateupdate = "-2";
+    private String birthdaydate = "-2";
+    private String device_id = "-2";
 
     public Usermodel() {
     }
+   
 
-    public Usermodel(String User_id,String Name, String Last_name, String Email, String Password, String Address,String Type, String Imguser) {
-        this.user_id=User_id;
-        this.name = Name;
-        this.last_name = Last_name;
-        this.email = Email;
-        this.password = Password;
-        this.address = Address;
-        this.type =  Type;
-        this.imguser =  Imguser;
-  }
     public String getUser_id() {
         return user_id;
     }
@@ -91,7 +86,38 @@ public class Usermodel {
     public void setImguser(String imguser) {
         this.imguser = imguser;
     }
-    
+
+    public String getRegistrationdate() {
+        return registrationdate;
+    }
+
+    public void setRegistrationdate(String registrationdate) {
+        this.registrationdate = registrationdate;
+    }
+
+    public String getDateupdate() {
+        return dateupdate;
+    }
+
+    public void setDateupdate(String dateupdate) {
+        this.dateupdate = dateupdate;
+    }
+
+    public String getBirthdaydate() {
+        return birthdaydate;
+    }
+
+    public void setBirthdaydate(String birthdaydate) {
+        this.birthdaydate = birthdaydate;
+    }
+
+    public String getDevice_id() {
+        return device_id;
+    }
+
+    public void setDevice_id(String device_id) {
+        this.device_id = device_id;
+    }
     
     
     

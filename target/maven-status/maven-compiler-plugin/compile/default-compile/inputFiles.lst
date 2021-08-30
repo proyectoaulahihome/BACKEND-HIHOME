@@ -1,12 +1,23 @@
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\DataStaticBD\CodeDJA.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\DataStaticBD\Conection.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\DataStaticBD\DataBd.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\Controller\UserController.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\Resources\ApplicationConfig.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\Models\Usermodel.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\apisclient\NewJerseyClient.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\DAO\UserDAO.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\DataStaticBD\Methods.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\allApis\Userresource.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\DataStaticBD\FileAccess.java
-G:\Mi unidad\2021\Universidad\Repositorios\8vo\Smarthome_maven\bsmarthome\src\main\java\test\testeosmain.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\test\testeosmain.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\allApis\Deviceresource.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\Http\Http.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\DataStaticBD\DataBd.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\DataStaticBD\FileAccess.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\Models\Datamodel.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\DAO\UserDAO.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\Models\UserDevicemodel.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\allApis\Userresource.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\apisclient\NewJerseyClient.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\DAO\NotificationDAO.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\Resources\ApplicationConfig.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\allApis\Dataresource.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\allApis\Notificationresource.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\DAO\DeviceDAO.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\DataStaticBD\CodeDJA.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\DataStaticBD\Conection.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\DataStaticBD\Methods.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\DAO\DataDAO.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\Controller\UserController.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\Models\Usermodel.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\Models\Notificationsmodel.java
+C:\Movil\Repositorios\hihome\bsmarthome\src\main\java\Models\Devicemodel.java

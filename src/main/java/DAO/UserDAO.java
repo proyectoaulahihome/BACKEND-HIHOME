@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package DAO;
 
-
 import DataStaticBD.Conection;
+import Models.UserDevicemodel;
 import Models.Usermodel;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -24,23 +19,29 @@ import javax.swing.table.DefaultTableModel;
  * @author jorgefaruk
  */
 public class UserDAO {
+
     Conection con;
     String sentence;
-    
+
     public UserDAO() {
         con = new Conection();
     }
-    
-    public String selectUserDAO(){
+
+    public String selectUserAll() {
         sentence = "select * from tbluser";
-        Conection con = new Conection();
         String json = con.getRecordsInJson(sentence);
-    return json;
-    } 
+        return json;
+    }
     
-    public Usermodel setUser(DefaultTableModel table, int index)
-    {
-   
+     public String selectUserbydevice(String iddevice) {
+        sentence = "select * from tbluser as usertable inner join tbllinkuser "
+                + "as linkuser on usertable.user_id = linkuser.user_id\n "
+                + "where device_id = '"+iddevice+"'";
+        String json = con.getRecordsInJson(sentence);
+        return json;
+    }
+
+    public Usermodel setUser(DefaultTableModel table, int index) {
         Usermodel usr = new Usermodel();
         usr.setUser_id(table.getValueAt(index, 0).toString());
         usr.setName(table.getValueAt(index, 1).toString());
@@ -50,9 +51,13 @@ public class UserDAO {
         usr.setAddress(table.getValueAt(index, 5).toString());
         usr.setType(table.getValueAt(index, 6).toString());
         usr.setImguser(table.getValueAt(index, 7).toString());
+        usr.setRegistrationdate(table.getValueAt(index, 8).toString());
+        usr.setDateupdate(table.getValueAt(index, 9).toString());
+        usr.setBirthdaydate(table.getValueAt(index, 10).toString());
+        usr.setDevice_id(table.getValueAt(index, 11).toString());
         return usr;
     }
-            
+
     public String userDataJson(Usermodel usr) {
         String key = "digiclave";
         long tiempo = System.currentTimeMillis();
@@ -61,9 +66,10 @@ public class UserDAO {
                 .signWith(SignatureAlgorithm.HS256, key)
                 .setSubject(usr.getUser_id())
                 .setIssuedAt(new Date(tiempo))
-                .setExpiration(new Date(tiempo+900000))
+                .setExpiration(new Date(tiempo + 900000))
                 .compact();
         JsonObjectBuilder jsoB = Json.createObjectBuilder();
+        jsoB.add("user_id", usr.getUser_id());
         jsoB.add("name", usr.getName());
         jsoB.add("last_name", usr.getLast_name());
         jsoB.add("email", usr.getEmail());
@@ -71,15 +77,38 @@ public class UserDAO {
         jsoB.add("address", usr.getAddress());
         jsoB.add("type", usr.getType());
         jsoB.add("imguser", usr.getImguser());
+        jsoB.add("registrationdate", usr.getRegistrationdate());
+        jsoB.add("dateupdate", usr.getDateupdate());
+        jsoB.add("birthdaydate", usr.getBirthdaydate());
+        jsoB.add("device_id", usr.getDevice_id());
         jsoB.add("user_token", jwt);
         javax.json.JsonObject jsonObj = jsoB.build();
         return jsonObj.toString();
     }
-    
-   public boolean comprobeUniqueEmail(Usermodel usr)
-    {
-        String sentency = String.format("select * from tbluser where email='%s';",usr.getEmail());
+
+    public boolean comprobeUniqueEmail(Usermodel usr) {
+        String sentency = String.format("select * from tbluser where email='%s';", usr.getEmail());
         return (((con.returnRecord(sentency)).getRowCount() <= 0));
     }
     
+
+    public boolean insertUser(UserDevicemodel userdevicemodel) {
+        String structure = String.format(
+                "<userdevice>"
+                    + "<name>" + userdevicemodel.getName() + "</name>"
+                    + "<last_name>" + userdevicemodel.getLast_name() + "</last_name>"
+                    + "<email>" + userdevicemodel.getEmail() + "</email>"
+                    + "<password>" + userdevicemodel.getPassword() + "</password>"
+                    + "<address>" + userdevicemodel.getAddress() + "</address>"
+                    + "<type>" + userdevicemodel.getType() + "</type>"
+                    + "<imguser>" + userdevicemodel.getImguser() + "</imguser>"
+                    + "<device_id>" + userdevicemodel.getDevice_id() + "</device_id>"
+                    + "<namedevice>" + userdevicemodel.getNamedevice() + "</namedevice>"
+                    + "<mac>" + userdevicemodel.getMac() + "</mac>"
+                + "</userdevice>");
+
+        String sentency = "Select * from insertuser('" + structure + "')";
+        System.out.println(structure);
+        return con.modifyBD(sentency);
+    }
 }

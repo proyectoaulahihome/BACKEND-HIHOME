@@ -23,6 +23,9 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(allApis.Dataresource.class);
+        resources.add(allApis.Deviceresource.class);
+        resources.add(allApis.Notificationresource.class);
         resources.add(allApis.Userresource.class);
     } 
 }
